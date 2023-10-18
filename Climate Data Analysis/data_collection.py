@@ -71,8 +71,6 @@ class data_collection:
                 for i in row.select("td"):
                     row1.append(i.text)
                 all.append(row1)
-
-
             df = pd.DataFrame(all[1:])
             
         json_data = {'date':df[0],
@@ -125,7 +123,7 @@ class data_collection:
             sample_df.iloc[:,1:-2] = sample_df.iloc[:,1:-2].astype(float)
             sample_df.iloc[:,[0,-1,-2]] = sample_df.iloc[:,[0,-1,-2]].astype(int)
             sample_df = sample_df.fillna(sample_df.fillna(0).mean().round(2))
-
+            
             self.monthly_cleaned_data_list.append(sample_df)
 
     def reset_index(self,data):    
