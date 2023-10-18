@@ -40,7 +40,8 @@ class data_collection:
 
         soup = BeautifulSoup(
                     req.text, 
-                    "html.parser")
+                    "html.parser"
+                    )
 
         print(soup.select("h3",class_="bluecab")[0].text)
 
