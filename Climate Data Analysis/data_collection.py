@@ -92,8 +92,8 @@ class data_collection:
         
     def fetch_monthly_data(self):
         """
-            This function is responsible for implementing multithreading in web scraping across various months and years, 
-            managing data in 'monthly_data_list'.
+            This function is responsible for employing multithreading for concurrent web scraping across different months and years, 
+            storing results in monthly_data_list
         """
 
         self.monthly_data_list = []
