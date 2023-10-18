@@ -74,7 +74,7 @@ class data_collection:
 
             df = pd.DataFrame(all[1:])
             
-        dict_ = {'date':df[0],
+        json_data = {'date':df[0],
                  'T':df[1] ,
                  'TM':df[2],
                  'Tm':df[3],
@@ -87,7 +87,7 @@ class data_collection:
                  'Month':month_num,
                  'years':year_num}
         
-        df = pd.DataFrame(dict_)
+        df = pd.DataFrame(json_data)
         self.monthly_data_list.append(df.iloc[:-2,:])
 
         
